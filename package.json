@@ -1,15 +1,120 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+  "babel": {
+    "plugins": [
+      [
+        "babel-plugin-react-css-modules",
+        {
+          "filetypes": {
+            ".scss": {
+              "syntax": "postcss-scss"
+            }
+          }
+        }
+      ]
+    ],
+    "presets": [
+      "next/babel"
+    ]
   },
   "dependencies": {
+    "@zeit/next-css": "1.0.1",
+    "@zeit/next-sass": "1.0.1",
+    "babel-plugin-react-css-modules": "5.2.6",
+    "dayjs": "1.9.4",
+    "firebase": "8.0.0",
+    "framer-motion": "2.9.4",
+    "generic-names": "2.0.1",
     "next": "9.5.5",
+    "next-compose-plugins": "2.2.0",
+    "node-sass": "4.14.1",
+    "postcss-scss": "3.0.2",
     "react": "16.14.0",
-    "react-dom": "16.14.0"
-  }
+    "react-dom": "16.14.0",
+    "react-icons": "3.11.0",
+    "react-table": "7.6.1",
+    "ress": "3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.14.6",
+    "@types/react": "16.9.55",
+    "@types/react-css-modules": "4.6.2",
+    "@types/react-table": "7.0.25",
+    "@typescript-eslint/eslint-plugin": "4.6.0",
+    "eslint": "7.12.1",
+    "eslint-config-airbnb-typescript": "12.0.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "stylelint": "13.7.2",
+    "stylelint-config-sass-guidelines": "7.1.0",
+    "stylelint-order": "4.1.0",
+    "stylelint-scss": "3.18.0",
+    "typescript": "4.0.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.tsx"
+        ],
+        "rules": {
+          "react/prop-types": "off"
+        }
+      }
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "import/order": [
+        "error",
+        {
+          "alphabetize": {
+            "caseInsensitive": true,
+            "order": "asc"
+          },
+          "newlines-between": "never"
+        }
+      ],
+      "react/jsx-sort-props": [
+        "error"
+      ],
+      "sort-keys": "error"
+    }
+  },
+  "name": "nextjs",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint --fix --ext .ts,.tsx src/",
+    "lint:css": "stylelint \"**/*.scss\" --fix",
+    "start": "next start"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "plugins": [
+      "stylelint-order",
+      "stylelint-scss"
+    ],
+    "rules": {
+      "color-named": [
+        "never",
+        {
+          "ignore": [
+            "inside-function"
+          ]
+        }
+      ],
+      "order/properties-alphabetical-order": true
+    }
+  },
+  "version": "0.1.0"
 }

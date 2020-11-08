@@ -1,0 +1,33 @@
+@import 'styles/constants';
+
+.table {
+  border-collapse: collapse;
+}
+
+.thead {
+  white-space: nowrap;
+}
+
+.thead,
+.tbody {
+  font-size: 1.2rem;
+}
+
+.th {
+  background: map-get($colors, wine-red);
+  color: map-get($colors, white);
+  padding: 4px 8px;
+}
+
+.th,
+.td {
+  border: 1px solid map-get($colors, white);
+}
+
+.tbody .tr:nth-child(even) .td {
+  background: map-get($colors, light-gray);
+}
+
+.td {
+  padding: 8px;
+}

@@ -1,0 +1,28 @@
+@import 'styles/constants';
+
+.aside-wrapper {
+  background: map-get($colors, dark-blue);
+  height: 100%;
+  overflow: hidden auto;
+  position: fixed;
+}
+
+.aside-wrapper2 {
+  padding: 24px;
+  width: 240px;
+}
+
+.button {
+  background: map-get($colors, dark-blue);
+  position: fixed;
+  width: 24px;
+}
+
+.icon {
+  color: map-get($colors, white);
+  font-size: 2rem;
+}
+
+.main-wrapper {
+  padding: 0 0 0 24px;
+}

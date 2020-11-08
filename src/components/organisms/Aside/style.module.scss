@@ -1,0 +1,16 @@
+@import 'styles/constants';
+
+.aside {
+  background: map-get($colors, dark-blue);
+  color: map-get($colors, white);
+  height: 100%;
+}
+
+.definition-list-wrapper {
+  padding: 24px 0 0;
+}
+
+.qualifications {
+  list-style: square;
+  padding: 0 0 0 1.4rem;
+}

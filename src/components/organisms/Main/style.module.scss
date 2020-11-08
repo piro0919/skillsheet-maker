@@ -1,0 +1,14 @@
+@import 'styles/constants';
+
+.main {
+  color: map-get($colors, dark-blue);
+  display: grid;
+  gap: 48px;
+  padding: 24px;
+}
+
+.pr {
+  line-height: 1.5;
+  max-width: 1080px;
+  white-space: pre-wrap;
+}

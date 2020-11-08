@@ -1,0 +1,11 @@
+@import 'styles/constants';
+
+.icon {
+  color: map-get($colors, blue);
+  font-size: 2rem;
+}
+
+.no-cell,
+.process-in-charge-cell {
+  text-align: center;
+}
